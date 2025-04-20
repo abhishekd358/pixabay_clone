@@ -1,0 +1,117 @@
+body {
+  background-color: black;
+  color: #ffffff; /* Change text color for better visibility */
+  width: 100%;
+}
+
+
+body::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  /* padding-left: 130px; */
+  justify-content: center;
+  /* max-width: 1200px; */
+  margin: 50px 40px 20px 40px; /* Center the grid container */
+}
+
+.items {
+  display: flex;
+  justify-content: center; /* Center images horizontally within the items div */
+  align-items: center;
+  overflow: hidden; /* Prevent overflow */
+  border: 3px solid rgb(199, 199, 199); /* Initial border */
+  transition: border-color 0.6s ease; /* Smooth transition for hover effect */
+}
+
+.items:hover {
+  border-color: #12b0f3; /* Change border color on hover */
+}
+
+.items img {
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove bottom spacing */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
+}
+
+.items:hover img {
+  transform: scale(1.06); /* Scale the image on hover */
+}
+
+.search-box {
+  display: flex; /* Flex display for the search box */
+  justify-content: center; /* Center the input horizontally */
+  align-items: center;
+  margin: 30px 10px; /* Space above and below */
+   /* Make the search box sticky */
+    top: 0;            /* Stick it to the top */
+    background-color: black; /* Make sure it has a background color to cover content underneath */
+
+}
+
+.search-box input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc; /* Light border for input */
+  border-radius: 5px; /* Rounded corners */
+  outline: none; /* Remove outline */
+  transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+.search-box input:focus {
+  border-color: #2cfbff; /* Change border color on focus */
+}
+
+/* style of navbar*/
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  
+}
+
+li {
+    
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #305353;
+  color: white;
+}
+
+.logo {
+    position: sticky; /* Ensure position sticky is applied */
+    top: 0; /* Specify top to enable sticky positioning */
+    font-family: Times New Roman;
+    background-color: #0b1c01;
+  color: rgb(255, 255, 255);
+    transition: color 3s ease;
+    transition: transform 0.8s ease-in-out;
+    display: flex;
+    justify-content: center; /* centers horizontally */
+    align-items: center; /* centers vertically */
+    height: 11vh; /* Set height for the logo */
+    z-index: 10; /* Optional: ensure it appears above other elements */
+}
+.logo:hover {
+  color: #000000;
+    background-color: #e8e8e8;
+  transform: scale(1.01);
+}
